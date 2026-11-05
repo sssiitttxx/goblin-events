@@ -1,0 +1,37 @@
+/* Табло над полем */
+.score {
+  text-align: center;
+  font-size: 20px;
+  font-family: sans-serif;
+  margin-top: 20px;
+}
+
+/* Поле 4×4 */
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px;
+  width: 400px;
+  margin: 20px auto;
+  /* Курсор-молоток. 8 8 — точка «удара» внутри картинки 32×32 (головка).
+     pointer — запасной курсор, если картинка не загрузится */
+  cursor: url("./img/hammer.svg") 8 8, pointer;
+}
+
+/* Клетка */
+.cell {
+  background-color: #f0f4f8;
+  border: 2px solid #3b82f6;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Картинка гоблина не больше клетки */
+.goblin {
+  max-width: 80%;
+  max-height: 80%;
+}
